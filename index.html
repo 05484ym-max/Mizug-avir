@@ -28,16 +28,26 @@
     font-family:'Assistant', sans-serif;
     font-weight:400;
     overflow-x:hidden;
+    position:relative;
     background-image:
-      linear-gradient(rgba(251,252,253,0.28), rgba(251,252,253,0.4)),
       radial-gradient(ellipse at 20% -10%, rgba(46,147,196,0.20), transparent 45%),
-      radial-gradient(ellipse at 90% 10%, rgba(46,147,196,0.16), transparent 40%),
-      url('work.png');
+      radial-gradient(ellipse at 90% 10%, rgba(46,147,196,0.16), transparent 40%);
     background-color: var(--page-bg);
-    background-size: cover, auto, auto, 105%;
-    background-position: center, center, center, center 8%;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-attachment: fixed, scroll, scroll, fixed;
+    background-repeat: no-repeat, no-repeat;
+  }
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background-image:
+      linear-gradient(rgba(251,252,253,0.18), rgba(251,252,253,0.32)),
+      url('work.png');
+    background-size: cover, 130%;
+    background-position: center, center 6%;
+    background-repeat: no-repeat, no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 32%, transparent 78%);
+    mask-image: linear-gradient(to bottom, black 0%, black 32%, transparent 78%);
   }
   ::selection{background:var(--sky-base); color:#fff;}
 
@@ -114,9 +124,10 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero{position:relative; padding:170px 6vw 110px; min-height:92vh; display:flex; align-items:center; justify-content:center; text-align:center;}
+  .hero{position:relative; padding:120px 6vw 110px; min-height:92vh; display:flex; align-items:center; justify-content:center; text-align:center;}
   .hero-text{position:relative; z-index:2; max-width:640px; margin:0 auto;}
-  .eyebrow{font-size:.85rem; letter-spacing:.38em; color:var(--sky-dark); text-transform:uppercase; margin-bottom:18px; font-weight:700; text-align:center;}
+  .eyebrow{font-size:.85rem; letter-spacing:.38em; color:var(--sky-dark); text-transform:uppercase; margin-bottom:14px; font-weight:700; text-align:center;
+    text-shadow:0 1px 0 rgba(255,255,255,.5), 0 2px 12px rgba(255,255,255,.4);}
   .logo-word{
     font-family:'Frank Ruhl Libre', serif; font-weight:700;
     font-size:clamp(2.4rem, 6.2vw, 4.4rem); line-height:1.15; display:block;
@@ -126,11 +137,11 @@
     animation:shimmer 16s ease-in-out infinite;
   }
   .poster-title{
-    font-family:'Frank Ruhl Libre', serif; font-weight:600;
+    font-family:'Frank Ruhl Libre', serif; font-weight:700;
     font-size:clamp(1.9rem, 3.8vw, 2.7rem); line-height:1.32;
-    margin-top:30px; margin-bottom:22px; color:var(--graphite);
+    margin-top:18px; margin-bottom:22px; color:var(--graphite);
     letter-spacing:.005em;
-    text-shadow:0 1px 0 rgba(255,255,255,.6), 0 2px 18px rgba(255,255,255,.5);
+    text-shadow:0 1px 3px rgba(255,255,255,.85), 0 2px 22px rgba(255,255,255,.7), 0 0 40px rgba(255,255,255,.5);
   }
   .hero-sub{font-size:1.12rem; line-height:1.85; color:var(--graphite); opacity:.85; max-width:480px; margin-bottom:44px; font-weight:600;
     text-shadow:0 1px 0 rgba(255,255,255,.55), 0 2px 14px rgba(255,255,255,.45);
