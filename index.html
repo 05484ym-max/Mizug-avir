@@ -38,16 +38,17 @@
   body::before{
     content:'';
     position:fixed;
-    inset:0;
+    top:0; left:0; right:0;
+    height:78vh;
     z-index:-1;
     background-image:
-      linear-gradient(rgba(251,252,253,0.18), rgba(251,252,253,0.32)),
+      linear-gradient(rgba(251,252,253,0.15), rgba(251,252,253,0.28)),
       url('work.png');
-    background-size: cover, 130%;
-    background-position: center, center 6%;
+    background-size: cover, cover;
+    background-position: center, center 22%;
     background-repeat: no-repeat, no-repeat;
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 32%, transparent 78%);
-    mask-image: linear-gradient(to bottom, black 0%, black 32%, transparent 78%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 38%, transparent 96%);
+    mask-image: linear-gradient(to bottom, black 0%, black 38%, transparent 96%);
   }
   ::selection{background:var(--sky-base); color:#fff;}
 
@@ -143,7 +144,7 @@
     letter-spacing:.005em;
     text-shadow:0 1px 3px rgba(255,255,255,.85), 0 2px 22px rgba(255,255,255,.7), 0 0 40px rgba(255,255,255,.5);
   }
-  .hero-sub{font-size:1.12rem; line-height:1.85; color:var(--graphite); opacity:.85; max-width:480px; margin-bottom:44px; font-weight:600;
+  .hero-sub{font-size:1.12rem; line-height:1.85; color:var(--graphite); opacity:.85; max-width:480px; margin-top:20px; margin-bottom:44px; font-weight:600;
     text-shadow:0 1px 0 rgba(255,255,255,.55), 0 2px 14px rgba(255,255,255,.45);
   }
 
