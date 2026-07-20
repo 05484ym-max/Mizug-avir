@@ -33,8 +33,9 @@
       radial-gradient(ellipse at 20% -10%, rgba(46,147,196,0.20), transparent 45%),
       radial-gradient(ellipse at 90% 10%, rgba(46,147,196,0.16), transparent 40%),
       url('work.png');
-    background-size: cover, auto, auto, cover;
-    background-position: center, center, center, 68% 26%;
+    background-color: var(--page-bg);
+    background-size: cover, auto, auto, 82%;
+    background-position: center, center, center, center 8%;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-attachment: fixed, scroll, scroll, fixed;
   }
@@ -113,9 +114,9 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero{position:relative; padding:170px 6vw 110px; min-height:92vh; display:flex; align-items:center;}
-  .hero-text{position:relative; z-index:2; max-width:600px;}
-  .eyebrow{font-size:.85rem; letter-spacing:.38em; color:var(--sky-dark); text-transform:uppercase; margin-bottom:18px; font-weight:700;}
+  .hero{position:relative; padding:170px 6vw 110px; min-height:92vh; display:flex; align-items:center; justify-content:center; text-align:center;}
+  .hero-text{position:relative; z-index:2; max-width:640px; margin:0 auto;}
+  .eyebrow{font-size:.85rem; letter-spacing:.38em; color:var(--sky-dark); text-transform:uppercase; margin-bottom:18px; font-weight:700; text-align:center;}
   .logo-word{
     font-family:'Tangerine', cursive; font-weight:700;
     font-size:clamp(5.2rem, 12vw, 8.6rem); line-height:.95; display:block;
@@ -135,7 +136,7 @@
     text-shadow:0 1px 0 rgba(255,255,255,.55), 0 2px 14px rgba(255,255,255,.45);
   }
 
-  .icon-row{display:flex; margin-bottom:50px; border-top:1px solid var(--line-hair); border-bottom:1px solid var(--line-hair); padding:26px 0;}
+  .icon-row{display:flex; justify-content:center; margin-bottom:50px; border-top:1px solid var(--line-hair); border-bottom:1px solid var(--line-hair); padding:26px 0;}
   .icon-item{flex:1; text-align:center; padding:0 8px; border-inline-end:1px solid var(--line-hair);}
   .icon-item:last-child{border-inline-end:none;}
   .icon-item strong{display:block; font-family:'Frank Ruhl Libre', serif; font-weight:700; font-size:1.75rem; color:var(--sky-dark); margin-bottom:6px;}
@@ -155,7 +156,7 @@
   }
   .cta:hover{color:#fff;}
   .cta:hover::before{transform:scaleX(1);}
-  .cta-row{display:flex; gap:18px; flex-wrap:wrap; align-items:center;}
+  .cta-row{display:flex; gap:18px; flex-wrap:wrap; align-items:center; justify-content:center;}
   .cta-ghost{border-color:var(--line-hair); color:var(--graphite); font-weight:600;}
   .cta-ghost::before{display:none;}
   .cta-ghost:hover{color:var(--sky-dark); border-color:var(--sky-base);}
@@ -238,7 +239,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <div class="eyebrow">טכנאי מזגנים מוסמך</div>
+    <div class="eyebrow">ELIOR</div>
     <span class="logo-word">קריר</span>
     <p class="poster-title">שירות פרימיום להתקנה, תיקון ותחזוקת מזגנים — בבית שלכם, בזמן שלכם.</p>
     <p class="hero-sub">שלושה עשר שנות ניסיון בשטח, יחס אישי מהשיחה הראשונה ועד הסיום, ואחריות בכתב על כל עבודה.</p>
